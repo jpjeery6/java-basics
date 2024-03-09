@@ -9,3 +9,4 @@
 * Futures
 * executorService - execute vs submit
 * deadlock
+* thread dump vs heap dump
