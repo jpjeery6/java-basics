@@ -1,4 +1,5 @@
 import java.util.ArrayDeque;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.PriorityQueue;
 import java.util.Queue;
@@ -8,6 +9,7 @@ public class BasicCollectionDataStructures {
 
     public static void main(String[] args) {
 
+        // --------------------- Heaps ---------------------
         // default PriorityQueue is implemented with Min-Heap, that is the top element is the minimum one in the heap.
         System.out.println("Min Heap");
         Queue<Integer> minHeap = new PriorityQueue<>();
@@ -34,6 +36,7 @@ public class BasicCollectionDataStructures {
         maxHeap.poll();
         System.out.println(maxHeap);
 
+        // --------------------- QUEUE ---------------------
         // use as a queue - LL
         System.out.println("Queue - LL");
         Queue<Integer> queue = new LinkedList<>();
@@ -60,6 +63,7 @@ public class BasicCollectionDataStructures {
         deque.poll(); // -> pollFirst - remove from front
         System.out.println(deque);
 
+        // --------------------- Stack ---------------------
         // stack
         System.out.println("Stack");
         Stack<Integer> stack = new Stack<>();
@@ -72,6 +76,24 @@ public class BasicCollectionDataStructures {
 
         stack.pop();
         System.out.println(stack);
+
+        // --------------------- Graph ---------------------
+        // array of arrayLists - can be used when vertices are numbered 0,1,2...n-1
+        int n=3;
+        ArrayList<Integer>[] graph1 = new ArrayList[n];
+        graph1[0] = new ArrayList<>();
+        graph1[1] = new ArrayList<>();
+        graph1[2] = new ArrayList<>();
+
+        class Edge{
+            int v1;
+            int v2;
+            int w;
+        }
+        ArrayList<Edge>[] graph2 = new ArrayList[n];
+
+        // arrayList of arrayLists - any vertices, any edges
+        ArrayList<ArrayList<Integer>> graph3 = new ArrayList<ArrayList<Integer>>(n);
     }
 
 
